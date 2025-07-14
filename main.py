@@ -6,14 +6,18 @@ from pypresence import Presence
 from tkinter import *
 from tkinter import ttk
 from PIL import ImageGrab, Image, ImageTk
+from dotenv import load_dotenv
+import os
 import win32gui
 import os
 
+
+load_dotenv()  # Membaca file .env
 ICON_PATH = os.path.join(os.path.dirname(__file__), "assets", "clip-studio-paint-logo.png")
 # pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 # Discord Rich Presence
-CLIENT_ID = "1394255292186755142"
+CLIENT_ID = os.getenv("DISCORD_CLIENT_ID")
 CSP_TYPE = None
 discord_start_time = None
 rpc = Presence(CLIENT_ID)

@@ -1,0 +1,6 @@
+pytesseract
+pypresence
+pillow
+pywin32
+python-dotenv
+tk  # Optional, untuk GUI di beberapa OS non-Windows
